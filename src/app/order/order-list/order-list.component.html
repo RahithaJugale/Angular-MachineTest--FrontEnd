@@ -1,0 +1,24 @@
+<div class="container bg-dark bg-gradient rounded" id="orderListContainer">
+    <a href="#" class="text-white" routerLink="/order"><i class="fa fa-arrow-left float-left"></i></a>
+    <div class="row">
+        <h3 class="text-center text-light p-4">Order List</h3>
+    </div>
+    <table class="table bg-light table-bordered table-striped w-75 m-auto mb-5 pb-5 rounded">
+        <thead>
+            <tr class="text-center">
+                <th>Order No.</th>
+                <th>Customer No.</th>
+                <th>Customer Name</th>
+                <th>Order Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center" *ngFor="let order of orderService.orders">
+                <td>{{order.orderNo}}</td>
+                <td>{{order.customerNo}}</td>
+                <td></td>
+                <td>{{order.orderDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
